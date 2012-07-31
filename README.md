@@ -1,10 +1,10 @@
-# AESCrypt
+# AESCrypt-ObjC - Simple AES encryption / decryption for iOS and OS X
 
-A simple and opinionated AES encrypt / decrypt Objective-C class that just works.
+AESCrypt is a simple to use, opinionated AES encryption / decryption Objective-C class that just works.
 
 AESCrypt uses the AES-256-CBC cipher and encodes the encrypted data with base64.
 
-A corresponding gem to easily handle AES encrypt/decrypt in Ruby is available at http://github.com/Gurpartap/aescrypt.
+A corresponding gem to easily handle AES encryption / decryption in Ruby is available at http://github.com/Gurpartap/aescrypt.
 
 ## Installation
 
