@@ -31,7 +31,7 @@ AESCrypt includes Base64 and Crypto extensions for NSData and NSString classes. 
 
 ## Corresponding usage in Ruby
 
-The AESCrypt Ruby gem understands what you're talking about in your Objective-C code. The purpose of the Ruby gem and Objective-C class is to have something that works out of the box across the server (Ruby) and client (Objective-C). However, a standard encryption technique is implemented, which ensures that you can handle the data with any AES compatible library available across the web. So, you're not locked-in.
+The AESCrypt Ruby gem, available at http://github.com/Gurpartap/aescrypt, understands what you're talking about in your Objective-C code. The purpose of the Ruby gem and Objective-C class is to have something that works out of the box across the server (Ruby) and client (Objective-C). However, a standard encryption technique is implemented, which ensures that you can handle the data with any AES compatible library available across the web. So, you're not locked-in.
 
 Here's how you would use the Ruby gem:
 
