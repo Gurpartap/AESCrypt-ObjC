@@ -4,7 +4,7 @@ A simple and opinionated AES encrypt / decrypt Objective-C class that just works
 
 AESCrypt uses the AES-256-CBC cipher and encodes the encrypted data with base64.
 
-A corresponding gem to easily handle AES encrypt/decrypt in Ruby is available at http://github.com/Gurpartap/AESCrypt.
+A corresponding gem to easily handle AES encrypt/decrypt in Ruby is available at http://github.com/Gurpartap/aescrypt.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Add this line to your class:
 
 ## Usage
 
-    NSString *message = "top secret message";
+    NSString *message = @"top secret message";
     NSString *password = @"p4ssw0rd";
 
 Encrypting
@@ -46,7 +46,7 @@ Decrypting
 
     message = AESCrypt.decrypt(encrypted_data, password)
 
-See the Ruby gem README at http://github.com/Gurpartap/AESCrypt for more details.
+See the Ruby gem README at http://github.com/Gurpartap/aescrypt for more details.
 
 ## License
 
