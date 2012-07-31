@@ -46,7 +46,7 @@ Decrypting
 
     message = AESCrypt.decrypt(encrypted_data, password)
 
-See http://github.com/Gurpartap/AESCrypt for more details.
+See the Ruby gem README at http://github.com/Gurpartap/AESCrypt for more details.
 
 ## License
 
