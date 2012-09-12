@@ -98,7 +98,9 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 		[userInfo setObject: reason forKey: NSLocalizedFailureReasonErrorKey];
 	
 	NSError * result = [NSError errorWithDomain: kCommonCryptoErrorDomain code: status userInfo: userInfo];
-	[userInfo release];
+    #if !__has_feature(objc_arc)
+        [userInfo release];
+    #endif
 	
 	return ( result );
 }
@@ -414,9 +416,10 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
 	else
 		ivData = (NSMutableData *) [iv mutableCopy];	// data or nil
 	
-	[keyData autorelease];
-	[ivData autorelease];
-	
+    #if !__has_feature(objc_arc)
+        [keyData autorelease];
+        [ivData autorelease];
+	#endif
 	// ensure correct lengths for key and iv data, based on algorithms
 	FixKeyLengths( algorithm, keyData, ivData );
 	
@@ -486,8 +489,10 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
 	else
 		ivData = (NSMutableData *) [iv mutableCopy];	// data or nil
 	
-	[keyData autorelease];
-	[ivData autorelease];
+    #if !__has_feature(objc_arc)
+        [keyData autorelease];
+        [ivData autorelease];
+    #endif
 	
 	// ensure correct lengths for key and iv data, based on algorithms
 	FixKeyLengths( algorithm, keyData, ivData );
