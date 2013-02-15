@@ -12,7 +12,7 @@
 
 + (NSData *)base64DataFromString:(NSString *)string {
   unsigned long ixtext, lentext;
-  unsigned char ch, inbuf[4], outbuf[3];
+  unsigned char ch, inbuf[4]={}, outbuf[3];
   short i, ixinbuf;
   Boolean flignore, flendtext = false;
   const unsigned char *tempcstring;
