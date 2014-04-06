@@ -33,5 +33,6 @@
 
 + (NSString *)encrypt:(NSString *)message password:(NSString *)password;
 + (NSString *)decrypt:(NSString *)base64EncodedString password:(NSString *)password;
++ (NSData *)decryptData:(NSData *)encryptedData password:(NSString *)password;
 
 @end
