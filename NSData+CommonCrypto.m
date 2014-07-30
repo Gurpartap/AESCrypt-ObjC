@@ -282,11 +282,11 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
 	{
 		case kCCAlgorithmAES128:
 		{
-			if ( keyLength < 16 )
+			if ( keyLength <= 16 )
 			{
 				[keyData setLength: 16];
 			}
-			else if ( keyLength < 24 )
+			else if ( keyLength <= 24 )
 			{
 				[keyData setLength: 24];
 			}
