@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/NSString.h>
+#import <Foundation/NSData.h>
 
 @interface NSString (Base64Additions)
 

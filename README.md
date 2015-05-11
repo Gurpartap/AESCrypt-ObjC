@@ -25,6 +25,10 @@ Decrypting
 
     NSString *message = [AESCrypt decrypt:encryptedData password:password];
 
+## Demo
+
+Using swift at https://github.com/datomnurdin/RevivalxSwiftAESCrypt
+
 ## Common sense
 
 AESCrypt includes Base64 and Crypto extensions for NSData and NSString classes. If you're already using an extension that provides these, there is no need to use the included classes. Change the code in the AESCrypt class to correspond to your existing implementation of these extensions.
