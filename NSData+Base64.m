@@ -89,9 +89,9 @@
       if (ixinbuf == 4) {
         ixinbuf = 0;
         
-        outbuf[0] = (inbuf[0] << 2) | ((inbuf[1] & 0x30) >> 4);
-        outbuf[1] = ((inbuf[1] & 0x0F) << 4) | ((inbuf[2] & 0x3C) >> 2);
-        outbuf[2] = ((inbuf[2] & 0x03) << 6) | (inbuf[3] & 0x3F);
+        outbuf[0] = (unsigned char)(inbuf[0] << 2) | ((inbuf[1] & 0x30) >> 4);
+        outbuf[1] = (unsigned char)((inbuf[1] & 0x0F) << 4) | ((inbuf[2] & 0x3C) >> 2);
+        outbuf[2] = (unsigned char)((inbuf[2] & 0x03) << 6) | (inbuf[3] & 0x3F);
         
         for (i = 0; i < ctcharsinbuf; i++) {
           [theData appendBytes: &outbuf[i] length: 1];
