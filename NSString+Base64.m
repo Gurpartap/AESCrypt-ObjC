@@ -48,8 +48,8 @@ static char base64EncodingTable[64] = {
       }
     }
     output[0] = (input[0] & 0xFC) >> 2;
-    output[1] = ((input[0] & 0x03) << 4) | ((input[1] & 0xF0) >> 4);
-    output[2] = ((input[1] & 0x0F) << 2) | ((input[2] & 0xC0) >> 6);
+    output[1] = (unsigned char)((input[0] & 0x03) << 4) | ((input[1] & 0xF0) >> 4);
+    output[2] = (unsigned char)((input[1] & 0x0F) << 2) | ((input[2] & 0xC0) >> 6);
     output[3] = input[2] & 0x3F;
     ctcopy = 4;
     switch (ctremaining) {
@@ -72,7 +72,7 @@ static char base64EncodingTable[64] = {
     ixtext += 3;
     charsonline += 4;
     
-    if ((length > 0) && (charsonline >= length)) {
+    if ((length > 0) && (charsonline >= (short)length)) {
       charsonline = 0;
     }
   }     
