@@ -171,7 +171,7 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 
 @implementation NSData (CommonCryptor)
 
-- (NSData *) AES256EncryptedDataUsingKey: (id) key error: (NSError **) error
+- (NSData *) AES256EncryptedDataUsingKey: (id) key error: (NSError * __autoreleasing *) error
 {
 	CCCryptorStatus status = kCCSuccess;
 	NSData * result = [self dataEncryptedUsingAlgorithm: kCCAlgorithmAES128
@@ -188,7 +188,7 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 	return ( nil );
 }
 
-- (NSData *) decryptedAES256DataUsingKey: (id) key error: (NSError **) error
+- (NSData *) decryptedAES256DataUsingKey: (id) key error: (NSError * __autoreleasing *) error
 {
 	CCCryptorStatus status = kCCSuccess;
 	NSData * result = [self decryptedDataUsingAlgorithm: kCCAlgorithmAES128
@@ -205,7 +205,7 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 	return ( nil );
 }
 
-- (NSData *) DESEncryptedDataUsingKey: (id) key error: (NSError **) error
+- (NSData *) DESEncryptedDataUsingKey: (id) key error: (NSError * __autoreleasing *) error
 {
 	CCCryptorStatus status = kCCSuccess;
 	NSData * result = [self dataEncryptedUsingAlgorithm: kCCAlgorithmDES
@@ -222,7 +222,7 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 	return ( nil );
 }
 
-- (NSData *) decryptedDESDataUsingKey: (id) key error: (NSError **) error
+- (NSData *) decryptedDESDataUsingKey: (id) key error: (NSError * __autoreleasing *) error
 {
 	CCCryptorStatus status = kCCSuccess;
 	NSData * result = [self decryptedDataUsingAlgorithm: kCCAlgorithmDES
@@ -239,7 +239,7 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 	return ( nil );
 }
 
-- (NSData *) CASTEncryptedDataUsingKey: (id) key error: (NSError **) error
+- (NSData *) CASTEncryptedDataUsingKey: (id) key error: (NSError * __autoreleasing *) error
 {
 	CCCryptorStatus status = kCCSuccess;
 	NSData * result = [self dataEncryptedUsingAlgorithm: kCCAlgorithmCAST
@@ -256,7 +256,7 @@ NSString * const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 	return ( nil );
 }
 
-- (NSData *) decryptedCASTDataUsingKey: (id) key error: (NSError **) error
+- (NSData *) decryptedCASTDataUsingKey: (id) key error: (NSError * __autoreleasing *) error
 {
 	CCCryptorStatus status = kCCSuccess;
 	NSData * result = [self decryptedDataUsingAlgorithm: kCCAlgorithmCAST
